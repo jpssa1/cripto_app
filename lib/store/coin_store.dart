@@ -7,7 +7,7 @@ abstract class iCoinStore extends ChangeNotifier {
   Future<void> fetchCoins();
 }
 
-class CoinStore extends ChangeNotifier {
+class CoinStore extends iCoinStore {
   final repository = CoinRepository(client: HttpClient());
 
   Map<String, String> coinImages = {};
@@ -18,6 +18,7 @@ class CoinStore extends ChangeNotifier {
   CoinStore() {
     fetchCoins();
   }
+  @override
   Future<void> fetchCoins() async {
     try {
       final result = await repository.getCoins();
