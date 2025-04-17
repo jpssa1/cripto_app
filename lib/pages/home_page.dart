@@ -1,12 +1,9 @@
-import 'package:cripto_app/http/http_client.dart';
-import 'package:cripto_app/models/coin_model.dart';
-import 'package:cripto_app/repository/coin_repository.dart';
 import 'package:cripto_app/store/coin_store.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
