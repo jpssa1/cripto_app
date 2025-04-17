@@ -3,6 +3,10 @@ import 'package:cripto_app/models/coin_model.dart';
 import 'package:cripto_app/repository/coin_repository.dart';
 import 'package:flutter/material.dart';
 
+abstract class iCoinStore extends ChangeNotifier {
+  Future<void> fetchCoins();
+}
+
 class CoinStore extends ChangeNotifier {
   final repository = CoinRepository(client: HttpClient());
 
