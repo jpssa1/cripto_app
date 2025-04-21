@@ -3,15 +3,16 @@ import 'package:cripto_app/models/coin_model.dart';
 import 'package:cripto_app/repository/coin_repository.dart';
 import 'package:flutter/material.dart';
 
-abstract class iCoinStore extends ChangeNotifier {
+abstract class ICoinStore extends ChangeNotifier {
   Future<void> fetchCoins();
 }
 
-class CoinStore extends iCoinStore {
+class CoinStore extends ICoinStore {
   final repository = CoinRepository(client: HttpClient());
 
   Map<String, String> coinImages = {};
-  List<CoinModel> coins = [];
+  List<CoinModel> _allCoins = [];
+  List<CoinModel> filteredCoins = [];
   bool isLoading = true;
   String? errorMessage;
 
@@ -25,7 +26,8 @@ class CoinStore extends iCoinStore {
       final ids = result.map((coin) => coin.id).join(',');
       final images = await repository.getImages(ids);
 
-      coins = result;
+      _allCoins = result;
+      filteredCoins = result; // inicialmente mostra todas
       coinImages = images;
       isLoading = false;
       notifyListeners();
@@ -34,5 +36,19 @@ class CoinStore extends iCoinStore {
       isLoading = false;
       notifyListeners();
     }
+  }
+
+  void setSearchQuery(String query) {
+    if (query.isEmpty) {
+      filteredCoins = _allCoins;
+    } else {
+      filteredCoins =
+          _allCoins
+              .where(
+                (coin) => coin.name.toLowerCase().contains(query.toLowerCase()),
+              )
+              .toList();
+    }
+    notifyListeners();
   }
 }

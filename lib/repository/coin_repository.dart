@@ -34,9 +34,9 @@ class CoinRepository implements ICoinRepository {
     }
   }
 
-  Future<Map<String, String>> getImages(String id) async {
+  Future<Map<String, String>> getImages(String ids) async {
     final response = await client.get(
-      url: 'https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?id=$id',
+      url: 'https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?id=$ids',
     );
 
     if (response.statusCode == 200) {
