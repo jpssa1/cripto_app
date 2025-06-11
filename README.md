@@ -14,15 +14,15 @@ Aplicativo mobile desenvolvido com Flutter para acompanhar preços de criptomoed
 - 🪙 Listagem de criptomoedas em tempo real
 - 📈 Exibição de preços, variações e gráficos
 - 🔍 Busca por moedas específicas
-- 💾 Armazenamento local de favoritos (opcional)
-- ☁️ Integração com API de mercado (ex: CoinGecko)
+- 💾 Armazenamento local de favoritos 
+- ☁️ Integração com API de mercado (CoinGecko)
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
 - **Flutter** + **Dart**
-- `http` ou `dio` para requisições HTTP
-- Gerenciamento de estado com `BLoC` (ou outro, se diferente)
+- `http` para requisições HTTP
+- Gerenciamento de estado com `provider`
 - Consumo de API pública de cripto
 - UI responsiva com `Material Design`
