@@ -19,12 +19,6 @@ Aplicativo mobile desenvolvido com Flutter para acompanhar preços de criptomoed
 
 ---
 
-## 📸 Screenshots
-
-> (Adicione imagens aqui — use comandos `flutter run`, tire prints ou use emulador)
-
----
-
 ## 🚀 Tecnologias utilizadas
 
 - **Flutter** + **Dart**
