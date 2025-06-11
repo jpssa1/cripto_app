@@ -1,16 +1,34 @@
-# cripto_app
+# 📱 Cripto App
 
-A new Flutter project.
+Aplicativo mobile desenvolvido com Flutter para acompanhar preços de criptomoedas em tempo real. Ideal para quem quer monitorar o mercado com praticidade e uma interface intuitiva.
 
-## Getting Started
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+![State Management](https://img.shields.io/badge/State%20Management-BLoC-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Funcionalidades
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🪙 Listagem de criptomoedas em tempo real
+- 📈 Exibição de preços, variações e gráficos
+- 🔍 Busca por moedas específicas
+- 💾 Armazenamento local de favoritos (opcional)
+- ☁️ Integração com API de mercado (ex: CoinGecko)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 📸 Screenshots
+
+> (Adicione imagens aqui — use comandos `flutter run`, tire prints ou use emulador)
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- **Flutter** + **Dart**
+- `http` ou `dio` para requisições HTTP
+- Gerenciamento de estado com `BLoC` (ou outro, se diferente)
+- Consumo de API pública de cripto
+- UI responsiva com `Material Design`
